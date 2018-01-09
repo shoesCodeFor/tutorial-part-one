@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.css';
 
 class Counter extends React.Component {
     constructor(){
@@ -10,8 +12,8 @@ class Counter extends React.Component {
         <div>
             <h2>Counter: </h2>
             <p>current count: {this.state.count}</p>
-            <button onClick={() => this.setState({ count: this.state.count + 1})}>+</button>
-            <button onClick={() => this.setState({ count: this.state.count - 1})}>-</button>
+            <Button color="success" onClick={() => this.setState({ count: this.state.count + 1})}>+</Button>
+            <Button color="danger" onClick={() => this.setState({ count: this.state.count - 1})}>-</Button>
         </div>
         )
     }
